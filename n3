@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int count = 0;
+    std::string a = { "Menia zovyt Zecka i ia lybly bolshoi" };
+    std::string b = { "Etot Kod Zahvachen Cnimaite Tryci inache Smert" };
+
+    if (a.length() - 1 > b.length() - 1)
+    {
+        count = a.length() - b.length();
+        std::cout << "Строка a больше на " << count << " символов.\n";
+        while (count > 0)
+        {
+            std::cout << a << std::endl; count--;
+        }
+    }
+    else if (a.length() - 1 < b.length() - 1)
+    {
+        count = b.length() - a.length();
+        std::cout << "Строка b больше на " << count << " символов.\n";
+        while (count > 0)
+        {
+            std::cout << b << std::endl; count--;
+        }
+    }
+    else
+        std::cout << "Строки одинаковы!";
+    system("pause");
+    return 0;
+}
