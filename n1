@@ -1,0 +1,14 @@
+#include<iostream>
+
+int main()
+{
+    int ar[7] = { 1,18,25,14,13,48,0 };
+    int min = ar[0], max = ar[0], i = 1;
+    do {
+        if (min > ar[i])min = ar[i];
+        if (max < ar[i])max = ar[i];
+        ++i;
+    } while (ar[i] != 0);
+    std::cout << (min + max);
+    return 0;
+}
